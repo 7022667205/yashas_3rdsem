@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFlow - Innovation Starts Here</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: white;
+            clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+        }
+        
+        .stats-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .service-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .service-card .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border: none;
+        }
+        
+        .pricing-card {
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid #667eea;
+            position: relative;
+        }
+        
+        .badge-featured {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #667eea;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin: 15px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .btn-custom {
+            padding: 12px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background: #1a1a2e;
+            color: #9ca3af;
+            padding: 40px 0 20px;
+        }
+        
+        footer h5 {
+            color: white;
+        }
+        
+        footer a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="#">
+                <i class="bi bi-boxes"></i> TechFlow
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <button class="btn btn-outline-light ms-3">Sign In</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-3 fw-bold mb-4" data-aos="fade-up">Transform Your Business With Technology</h1>
+                    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">We provide cutting-edge solutions to help your business grow in the digital age. Let's build something amazing together.</p>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <button class="btn btn-light btn-lg btn-custom me-3">Get Started</button>
+                        <button class="btn btn-outline-light btn-lg btn-custom">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <i class="bi bi-graph-up-arrow" style="font-size: 300px; opacity: 0.2;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <h5>Happy Clients</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <div class="stat-number">1,200+</div>
+                        <h5>Projects Done</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <h5>Team Members</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <div class="stat-number">15</div>
+                        <h5>Years Experience</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=About+Us" class="img-fluid rounded shadow" alt="About Us">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">About TechFlow</h2>
+                    <p class="text-muted mb-4">We are a team of passionate professionals dedicated to delivering innovative technology solutions. With over 15 years of experience, we've helped hundreds of businesses achieve their digital transformation goals.</p>
+                    <div class="d-flex align-items-start mb-3">
+                        <i class="bi bi-check-circle-fill text-success fs-4 me-3"></i>
+                        <div>
+                            <h5>Expert Team</h5>
+                            <p class="text-muted">Skilled professionals with years of industry experience</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-3">
+                        <i class="bi bi-check-circle-fill text-success fs-4 me-3"></i>
+                        <div>
+                            <h5>Quality Assurance</h5>
+                            <p class="text-muted">Rigorous testing to ensure perfect results</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start">
+                        <i class="bi bi-check-circle-fill text-success fs-4 me-3"></i>
+                        <div>
+                            <h5>24/7 Support</h5>
+                            <p class="text-muted">Always available to help you succeed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5 bg-light" id="services">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Our Services</h2>
+                <p class="text-muted">Comprehensive solutions tailored to your needs</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card h-100">
+                        <div class="card-header text-center">
+                            <i class="bi bi-laptop display-4"></i>
+                            <h4 class="mt-3">Web Development</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted">Create responsive, modern websites that engage your audience and drive results.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check text-success"></i> Custom Design</li>
+                                <li><i class="bi bi-check text-success"></i> Responsive Layout</li>
+                                <li><i class="bi bi-check text-success"></i> SEO Optimized</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card h-100">
+                        <div class="card-header text-center">
+                            <i class="bi bi-phone display-4"></i>
+                            <h4 class="mt-3">Mobile Apps</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted">Build powerful mobile applications for iOS and Android platforms.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check text-success"></i> Native Development</li>
+                                <li><i class="bi bi-check text-success"></i> Cross-Platform</li>
+                                <li><i class="bi bi-check text-success"></i> User-Friendly UI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card h-100">
+                        <div class="card-header text-center">
+                            <i class="bi bi-cloud display-4"></i>
+                            <h4 class="mt-3">Cloud Solutions</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted">Scalable cloud infrastructure to power your business operations.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check text-success"></i> AWS & Azure</li>
+                                <li><i class="bi bi-check text-success"></i> Secure & Scalable</li>
+                                <li><i class="bi bi-check text-success"></i> Cost Effective</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-5" id="pricing">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Pricing Plans</h2>
+                <p class="text-muted">Choose the perfect plan for your business</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card pricing-card shadow-sm h-100">
+                        <div class="card-body text-center p-5">
+                            <h3 class="mb-3">Starter</h3>
+                            <h2 class="display-4 fw-bold mb-4">$29<small class="fs-6 text-muted">/mo</small></h2>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-3"><i class="bi bi-check text-success"></i> 5 Projects</li>
+                                <li class="mb-3"><i class="bi bi-check text-success"></i> 10GB Storage</li>
+                                <li class="mb-3"><i class="bi bi-check text-success"></i> Basic Support</li>
+                                <li class="mb-3 text-muted"><i class="bi bi-x"></i> Priority Support</li>
+                            </ul>
+                            <button class="btn btn-outline-primary btn-lg w-100">Choose Plan</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card pricing-card featured shadow h-100">
+                        <span class="badge badge-featured text-white">Most Popular</span>
+                        <div class="card-body text-center p-5">
+                            <h3 class="mb-3">Professional</h3>
+                            <h2 class="display-4 fw-bold mb-4">$79<small class="fs-6 text-muted">/mo</small></h2>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-3"><i class="bi bi-check text-success"></i> 20 Projects</li>
+                                <li class="mb-3"><i class="bi bi-check text-success"></i> 100GB Storage</li>
+                                <li class="mb-3"><i class="bi bi-check text-success"></i> Priority Support</li>
+                                <li class="mb-3"><i class="bi bi-check text-success"></i> Advanced Features</li>
+                            </ul>
+                            <button class="btn btn-primary btn-lg w-100">Choose Plan</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card pricing-card shadow-sm h-100">
+                        <div class="card-body text-center p-5">
+                            <h3 class="mb-3">Enterprise</h3>
+                            <h2 class="display-4 fw-bold mb-4">$199<small class="fs-6 text-muted">/mo</small></h2>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-3"><i class="bi bi-check text-success"></i> Unlimited Projects</li>
+                                <li class="mb-3"><i class="bi bi-check text-success"></i> Unlimited Storage</li>
+                                <li class="mb-3"><i class="bi bi-check text-success"></i> 24/7 Support</li>
+                                <li class="mb-3"><i class="bi bi-check text-success"></i> Custom Solutions</li>
+                            </ul>
+                            <button class="btn btn-outline-primary btn-lg w-100">Choose Plan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light" id="testimonials">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">What Our Clients Say</h2>
+                <p class="text-muted">Don't just take our word for it</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="text-muted">"TechFlow transformed our business with their amazing web solutions. Highly recommended!"</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="bg-primary rounded-circle" style="width: 50px; height: 50px;"></div>
+                            <div class="ms-3">
+                                <h6 class="mb-0">John Smith</h6>
+                                <small class="text-muted">CEO, TechCorp</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="text-muted">"Professional team, excellent communication, and outstanding results. We couldn't be happier!"</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="bg-success rounded-circle" style="width: 50px; height: 50px;"></div>
+                            <div class="ms-3">
+                                <h6 class="mb-0">Sarah Johnson</h6>
+                                <small class="text-muted">Marketing Director</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="text-muted">"Their expertise and dedication helped us achieve our digital transformation goals ahead of schedule."</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="bg-info rounded-circle" style="width: 50px; height: 50px;"></div>
+                            <div class="ms-3">
+                                <h6 class="mb-0">Mike Davis</h6>
+                                <small class="text-muted">CTO, Innovation Labs</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2 class="display-4 fw-bold mb-4">Ready to Get Started?</h2>
+            <p class="lead mb-5">Join hundreds of satisfied clients and transform your business today</p>
+            <button class="btn btn-light btn-lg btn-custom">Contact Us Now</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="display-6 fw-bold mb-4">Get In Touch</h2>
+                    <p class="text-muted mb-4">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                    <div class="mb-3">
+                        <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                        <strong>Address:</strong> 123 Business Street, Tech City, TC 12345
+                    </div>
+                    <div class="mb-3">
+                        <i class="bi bi-telephone-fill text-primary me-2"></i>
+                        <strong>Phone:</strong> +1 (555) 123-4567
+                    </div>
+                    <div class="mb-3">
+                        <i class="bi bi-envelope-fill text-primary me-2"></i>
+                        <strong>Email:</strong> info@techflow.com
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control form-control-lg" placeholder="First Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control form-control-lg" placeholder="Last Name">
+                            </div>
+                            <div class="col-12">
+                                <input type="email" class="form-control form-control-lg" placeholder="Email Address">
+                            </div>
+                            <div class="col-12">
+                                <input type="tel" class="form-control form-control-lg" placeholder="Phone Number">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control form-control-lg" rows="5" placeholder="Your Message"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3"><i class="bi bi-boxes"></i> TechFlow</h5>
+                    <p>Empowering businesses through innovative technology solutions since 2009.</p>
+                    <div class="mt-3">
+                        <a href="#" class="me-3"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-linkedin fs-4"></i></a>
+                        <a href="#"><i class="bi bi-instagram fs-4"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-3">Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">About Us</a></li>
+                        <li class="mb-2"><a href="#">Careers</a></li>
+                        <li class="mb-2"><a href="#">Blog</a></li>
+                        <li class="mb-2"><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-3">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Web Design</a></li>
+                        <li class="mb-2"><a href="#">Development</a></li>
+                        <li class="mb-2"><a href="#">Consulting</a></li>
+                        <li class="mb-2"><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-3">Resources</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Documentation</a></li>
+                        <li class="mb-2"><a href="#">Tutorials</a></li>
+                        <li class="mb-2"><a href="#">FAQs</a></li>
+                        <li class="mb-2"><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-3">Legal</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#">Terms of Service</a></li>
+                        <li class="mb-2"><a href="#">Cookie Policy</a></li>
+                        <li class="mb-2"><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: #374151;">
+            <div class="text-center">
+                <p>&copy; 2024 TechFlow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

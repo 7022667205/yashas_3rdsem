@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="class heading">This is heading 1</h1>
+    <h2 class="class heading">This is heading 2</h2>
+    <h3 id="id heading">This is heading 3</h3>
+<p>Hello cec welcome back to my channel</p>
+<p>Hello World</p>
+<script>
+    var normalheading=document.getElementsByTagName("h1");
+    console.log(normalheading);
+    normalheading[0].style.color="red";
+    normalheading[0].style.backgroundColor="yellow";
+    normalheading[0].innerHTML="This is modified heading 5";
+    var classheading=document.getElementsByClassName("heading");
+    console.log(classheading);
+    classheading[1].style.color="blue";
+    classheading[1].innerHTML="This is modified heading 7";
+    var idheading=document.getElementById("id heading");
+    console.log(idheading);
+    idheading.style.color="green";
+    idheading.innerHTML="This is modified heading 9";
+    idheading.style.textAlign="center";
+    var para=document.getElementsByTagName("p");
+    console.log(para);
+    para[0].style.fontSize="20px";
+    para[0].style.fontFamily="Arial";
+    para[0].style.backgroundColor="lightgrey";
+    para[0].style.padding="10px";
+    var para=document.getElementsByTagName("p");
+    console.log(para);
+    para[1].style.fontSize="30px";
+    para[1].style.fontFamily="times new roman";
+    para[1].style.backgroundColor="lightblue";
+    para[1].style.padding="20px";
+</script>
+
+    
+</body>
+</html>
